@@ -1,0 +1,50 @@
+<nav class="navbar  navbar-expand-md style=" style="background-color: #0C4B33;">
+  <a href="{% url 'index'%}" class="navbar-brand" style="color:#fff">Brian De Vita</a>
+
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navb" >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+<div id="navb" class="navbar-collapse collapse-hide">
+  <ul class="nav navbar-nav ml-auto">
+{% if user.is_authenticated %}
+
+
+
+  <li class="navbar-items">
+    <a href="{% url 'logout' %}" style="color:#fff" class="nav-link">
+      <span class="fa fa-sign-in-alt">
+    </span>
+    Salir</a>
+    </li>
+
+{% else %}
+
+
+      <li class="navbar-items">
+        <a href="{% url 'login' %}" style="color:#fff" class="nav-link">
+          <span class="fas fa-user"></span>
+          Login</a>
+      </li>
+
+
+
+    <li class="navbar-items">
+      <a href="{% url 'registro' %}" style="color:#fff" class="nav-link">
+        <span class="fas fa-user"></span>
+        Registro</a>
+    </li>
+
+
+
+{%endif%}
+<li class="navbar-items">
+  <a href="{% url 'contacto' %}" style="color:#fff" class="nav-link">
+    <span class="fa fa-address-book"></span>
+    Contacto</a></li>
+
+  </ul>
+
+</div>
+
+
+</nav>

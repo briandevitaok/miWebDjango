@@ -1,0 +1,25 @@
+{% extends 'base.html'%}
+{%load static%}
+{% block contacto %}
+
+
+
+
+
+
+<div class="col">
+
+  <h2>Contacto</h2>
+
+  <!--Formulario-->
+  <form method="post">  {% csrf_token %}
+
+    {{form.as_p}}
+
+    <br>
+    <button type="submit" style="background-color:#0C4B33; color:#fff" class="btn">Inviar</button>
+  </form>
+</div>
+
+
+{% endblock %}
